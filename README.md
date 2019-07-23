@@ -1,17 +1,17 @@
-# JS-Dir
+# JS Test Suite
 
 This node package allows you to generate an extremely barebones javascript testing repository with babel, node and chai.
 
 ## Installation
 
-Simply run `npm install -g js-dir`
+Simply run `npm install -g js-test-suite`
 
 ## Usage
 
-Once installed, run `js-dir NAME`, where `NAME` is the name of the repo you
+Once installed, run `js-test-suite NAME`, where `NAME` is the name of the repo you
 would like to generate.
 
-Here are the files that are generated when you run `js-dir blackjack`:
+Here are the files that are generated when you run `js-test-suite blackjack`:
 
 ```
 blackjack/

@@ -1,5 +1,5 @@
 {
-  "name": "js-dir",
+  "name": "js-test-suite",
   "version": "1.0.0",
   "description": "Generate a javascript test suite.",
   "main": "index.js",
