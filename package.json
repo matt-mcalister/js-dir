@@ -1,0 +1,9 @@
+{
+  "name": "js-dir",
+  "version": "1.0.0",
+  "description": "Generate a javascript test suite.",
+  "main": "index.js",
+  "author": "Matt McAlister",
+  "license": "MIT",
+  "bin": "./bin/index.js"
+}
