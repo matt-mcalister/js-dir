@@ -23,13 +23,20 @@ module.exports = function(dir_name) {
   }
   fs.writeFileSync(dir_name + "/package.json", JSON.stringify(package_json, null, 3))
   console.log(`GENERATED ${dir_name}/package.json`)
+
   babelrc = {
     "presets": ["@babel/preset-env"]
   }
   fs.writeFileSync(dir_name + "/.babelrc", JSON.stringify(babelrc, null, 2))
   console.log(`GENERATED ${dir_name}/.babelrc`)
+
+
   fs.mkdirSync(dir_name + "/src")
   console.log(`GENERATED ${dir_name}/src`)
+
+  indexjs = "function timesTwo(n){\n\treturn n * 2\n}\n\nexport {\n\ttimesTwo\n}"
+  fs.writeFileSync(dir_name + "/src/index.js", indexjs)
+
   fs.mkdirSync(dir_name + "/test")
   console.log(`GENERATED ${dir_name}/test`)
 }
