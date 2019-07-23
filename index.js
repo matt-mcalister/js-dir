@@ -28,4 +28,8 @@ module.exports = function(dir_name) {
   }
   fs.writeFileSync(dir_name + "/.babelrc", JSON.stringify(babelrc, null, 2))
   console.log(`GENERATED ${dir_name}/.babelrc`)
+  fs.mkdirSync(dir_name + "/src")
+  console.log(`GENERATED ${dir_name}/src`)
+  fs.mkdirSync(dir_name + "/test")
+  console.log(`GENERATED ${dir_name}/test`)
 }
