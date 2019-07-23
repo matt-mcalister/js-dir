@@ -23,4 +23,9 @@ module.exports = function(dir_name) {
   }
   fs.writeFileSync(dir_name + "/package.json", JSON.stringify(package_json, null, 3))
   console.log(`GENERATED ${dir_name}/package.json`)
+  babelrc = {
+    "presets": ["@babel/preset-env"]
+  }
+  fs.writeFileSync(dir_name + "/.babelrc", JSON.stringify(babelrc, null, 2))
+  console.log(`GENERATED ${dir_name}/.babelrc`)
 }
