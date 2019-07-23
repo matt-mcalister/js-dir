@@ -36,7 +36,15 @@ module.exports = function(dir_name) {
 
   indexjs = "function timesTwo(n){\n\treturn n * 2\n}\n\nexport {\n\ttimesTwo\n}"
   fs.writeFileSync(dir_name + "/src/index.js", indexjs)
+  console.log(`GENERATED ${dir_name}/src/index.js`)
 
   fs.mkdirSync(dir_name + "/test")
   console.log(`GENERATED ${dir_name}/test`)
+
+  specjs = "import { expect } from 'chai'\nimport { timesTwo } from '../src/index'\n\ndescribe('timesTwo function', () => {\n\tit('returns an integer twice the amount of its argument', () => {\n\t\texpect(timesTwo(5)).to.equal(10)\n\t})\n})"
+  fs.writeFileSync(dir_name + "/test/index-spec.js", specjs)
+  console.log(`GENERATED ${dir_name}/test/index-spec.js`)
+
+  console.log("\n\n" + dir_name + "/ generation complete!")
+  console.log("Now just `cd " + dir_name + " && npm install` and get coding!")
 }
